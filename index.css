@@ -1,0 +1,89 @@
+:root {
+    --black: #0f0f0f;
+    --gray: #7f7f7f;
+    --white: #efefef;
+    --red1: #3f0717;
+    --red2: #4f1727;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--red2);
+}
+html {
+    text-align: left;
+    font-family: "Noto Serif JP", serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: var(--white);
+}
+a {
+    color: var(--white);
+}
+main {
+    display: flex;
+    justify-content: center;
+}
+main > div {
+    width: 960px;
+    height: auto;
+    margin: 32px 0;
+}
+
+#header {
+    text-align: center;
+    margin: 12px;
+    margin-top: 0;
+    padding: 12px;
+    border-left: double 6px var(--white);
+    border-right: double 6px var(--white);
+    background-color: var(--red1);
+}
+#header > .title {
+    font-weight: 500;
+    font-size: 32px;
+    padding-bottom: 12px;
+    border-bottom: solid 1px var(--white);
+}
+#header > .sub {
+    padding-top: 12px;
+}
+
+#gallery {
+    margin: 0 6px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+#gallery > .think {
+    display: flex;
+    align-self: flex-start;
+    align-content: space-between;
+    width: calc(50% - 14px);
+    height: auto;
+    margin: 4px 6px;
+    border: solid 1px var(--white);
+    background-color: var(--white);
+}
+#gallery > .think > .number {
+    text-align: center;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 6px;
+    border-right: 6px double var(--white);
+    background-color: var(--red1);
+}
+#gallery > .think > .text {
+    padding: 12px;
+    color: var(--black);
+}
+
+@media screen and (max-width: 720px) {
+    #gallery > .think {
+        width: calc(100% - 14px);
+    }
+}
