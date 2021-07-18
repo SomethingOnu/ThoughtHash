@@ -2,7 +2,7 @@ const gallery = document.getElementById('gallery');
 
 const onLoad = async () => {
     const data = await fetch('index.json').then(resp => resp.json());
-    for (let i in data) {
+    for (let i = data.length - 1; i >= 0; i--) {
         const n   = parseInt(i) + 1;
         const num = n.toString().padStart(3, '0');
 
